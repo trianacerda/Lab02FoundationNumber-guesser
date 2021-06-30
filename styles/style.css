@@ -1,0 +1,19 @@
+#game-box {
+    height: 70px;
+    width: 200px;
+    margin: 100px 0px 10px 40%;
+}
+h1 {
+    margin-bottom: 10%;
+}
+#results {
+    margin-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+#button {
+    margin: 10px;
+}
+#reset {
+    margin: 20%;
+}
