@@ -1,19 +1,54 @@
+
+#header{
+    background-color: black;
+}
+
 #game-box {
     height: 70px;
     width: 200px;
     margin: 100px 0px 10px 40%;
+    background-color: black;
+}
+input{
+    background-color: black;
+    color: cornsilk;
 }
 h1 {
     margin-bottom: 10%;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: cornsilk;
+    background-color: black;
 }
+h2 {
+    font-size: 1rem;
+    color: cornsilk;
+    background-color: black;
+}
+ol {
+    background-color: black;
+    color:cornsilk;
+}
+
+
 #results {
     margin-top: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: cornsilk;
+    background-color: black
+    ;
 
 }
 #button {
-    margin: 10px;
+    margin: 10px 10px 10px 40px ;
+    color: cornsilk;
+    background-color: black;
 }
 #reset {
-    margin: 20%;
+    margin: 10px 10px 10px 42px ;
+    color: cornsilk;
+    background-color: black;
+}
+main {
+    background-color: black;
 }

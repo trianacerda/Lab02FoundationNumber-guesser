@@ -21,9 +21,9 @@ guessButton.addEventListener ('click', () => {
     }
     if (guessesRemaining === 0) {
         guessButton.disabled = true;
+        return guessResults.textContent = `You Lose!`;
     }
     if (userInput.value > targetNumber) {
-        console.log(typeof userInput.value,'something');
         return guessResults.textContent = `Too High! Guesses Left:  ${guessesRemaining}`;
     } else if (userInput.value < targetNumber) {
         return guessResults.textContent = `Too Low! Guesses Left:  ${guessesRemaining}`;
