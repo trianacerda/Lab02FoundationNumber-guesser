@@ -1,3 +1,4 @@
+import { compareNumbers } from './utils.js'; 
 
 const userInput = document.getElementById('user-input');
 const guessButton = document.getElementById('button');
@@ -13,22 +14,22 @@ resetBtn.addEventListener ('click', () => {
 
 guessButton.addEventListener ('click', () => {
     guessesRemaining --;
-   
     const guessedNumber = Number(userInput.value);
+    const guessResults = compareNumbers(targetNumber, guessedNumber);
     
-    if (guessedNumber === targetNumber) {
-        guessButton.disabled = true;
-    }
-    if (guessesRemaining === 0) {
-        guessButton.disabled = true;
-        return guessResults.textContent = `You Lose!`;
-    }
-    if (userInput.value > targetNumber) {
-        return guessResults.textContent = `Too High! Guesses Left:  ${guessesRemaining}`;
-    } else if (userInput.value < targetNumber) {
-        return guessResults.textContent = `Too Low! Guesses Left:  ${guessesRemaining}`;
-    } else   
-        return guessResults.textContent = `You Win! Guesses Left: ${guessesRemaining}`;
+    // if (guessedNumber === targetNumber) {
+    //     guessButton.disabled = true;
+    // }
+    // if (guessesRemaining === 0) {
+    //     guessButton.disabled = true;
+    //     return guessResults.textContent = `You Lose!`;
+    // }
+    // if (userInput.value > targetNumber) {
+    //     return guessResults.textContent = `Too High! Guesses Left:  ${guessesRemaining}`;
+    // } else if (userInput.value < targetNumber) {
+    //     return guessResults.textContent = `Too Low! Guesses Left:  ${guessesRemaining}`;
+    // } else   
+    //     return guessResults.textContent = `You Win! Guesses Left: ${guessesRemaining}`;
     
     
 });
