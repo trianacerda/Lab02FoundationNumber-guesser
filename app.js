@@ -15,9 +15,25 @@ resetBtn.addEventListener ('click', () => {
 guessButton.addEventListener ('click', () => {
     guessesRemaining --;
     const guessedNumber = Number(userInput.value);
-    const guessResults = compareNumbers(targetNumber, guessedNumber);
+    const compareResults = compareNumbers(targetNumber, guessedNumber);
+
+    if (guessesRemaining === 0) {
+        guessButton.disabled = true;
+        return guessResults.textContent = `You Lose!`;
+    }
     
+    if (compareResults === 0){
+        guessButton.disabled = true;
+        return guessResults.textContent = `You Win! Guesses Left: ${guessesRemaining}`;
+    }
+    else if (compareResults === -1){
+        return guessResults.textContent = `Too Low! Guesses Left:  ${guessesRemaining}`;
+    }
+    else {
+        return guessResults.textContent = `Too High! Guesses Left:  ${guessesRemaining}`;
+    }
     // if (guessedNumber === targetNumber) {
+    
     //     guessButton.disabled = true;
     // }
     // if (guessesRemaining === 0) {
